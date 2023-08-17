@@ -1,18 +1,38 @@
-let obj1 = {name:"Person1",age:5};
-let obj2 = {age:5, name:"Person1"};
 
-console.log(result());
+<html>
+  <head>
+    <title>XMLHttpRequest Example</title>
+  </head>
+  <body>
+    <script>
+    //Create a new XMLHttpRequest object
+      var xhr = new XMLHttpRequest();
 
-function result(){
-    if (Object.keys(obj1).length !== Object.keys(obj2).length){
-        return false;
-    }
+      //Define HTTP method and URL
+      var method = "GET";
+      var url = "https://restcountries.com/v3.1/all";
 
-    for (var key in obj1){
-        if (!obj2.hasOwnProperty(key) || obj1[key] !== obj2[key]){
-           return false;
-       }
-    }
+      //Open the request
+      xhr.open(method, url);
 
-    return true ;
-}
+      xhr.onload = function () {
+        debugger;
+        if (xhr.status === 200) {
+          //Request was successful
+          console.log(xhr.responseText);
+          var details = JSON.parse(xhr.responseText);
+          for (var i=0; i<details.length;i++){
+            console.log(details[i].flag);
+          }
+          
+        } else {
+          //Request failed
+          console.log("Request failed", xhr.status);
+        }
+      };
+
+      //send the request
+      xhr.send();
+    </script>
+  </body>
+</html>
