@@ -6,7 +6,7 @@ class Person{
     }
 
     getData(){
-        console.log(this.name,"from",this.place,"is",this.age,"years old.");
+        return this.name+", from "+this.place+" is "+this.age+" years old.";
     }
 
 }
