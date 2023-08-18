@@ -1,0 +1,20 @@
+class Person{
+    constructor(name, age, place){
+        this.name = name;
+        this.age = age;
+        this.place =place;
+    }
+
+    getData(){
+        console.log(this.name,"from",this.place,"is",this.age,"years old.");
+    }
+
+}
+
+var p1 = new Person("Josphia",23,"Chennai") ;
+var p2 = new Person("Gladlin",22,"Chennai") ;
+var p3 = new Person("Sam",24,"Chennai") ;
+
+console.log(p1.getData());
+console.log(p2.getData());
+console.log(p3.getData());
