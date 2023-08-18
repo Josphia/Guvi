@@ -1,0 +1,55 @@
+[Running] node "c:\Users\USER\Desktop\Coding\Task\Day4_Task1.js"
+Using Anonymous Function :
+a. The odd numbers in the array are
+37
+23
+7
+1
+9
+b. The string array in caps :
+APPLE
+BALL
+CAT
+c. The sum of all numbers in the array is 123
+d. The prime numbers in the array are
+2
+37
+23
+7
+e. The palindromes in the array are
+madam
+dood
+level
+refer
+f. The Median of 2 arrays is 16
+g. The duplicate removed array is
+[ 'a', 'b', 'c' ]
+
+
+Using IIFE :
+a. The odd numbers in the array are
+37
+23
+7
+1
+9
+b. The string array in caps :
+APPLE
+BALL
+CAT
+c. The sum of all numbers in the array is 123
+d. The prime numbers in the array are
+2
+37
+23
+7
+e. The palindromes in the array are
+madam
+dood
+level
+refer
+f. The Median of 2 arrays is 23
+g. The duplicate removed array is
+[ 'a', 'b', 'c' ]
+
+[Done] exited with code=0 in 0.766 seconds
