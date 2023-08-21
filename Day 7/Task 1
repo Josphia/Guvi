@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>XMLHttpRequest Example</title>
+  </head>
+  <body>
+    <script>
+
+      var xhr = new XMLHttpRequest();
+
+      var method = "GET";
+      var url = "https://restcountries.com/v3.1/all";
+
+      xhr.open(method, url);
+
+      xhr.onload = function () {
+        debugger;
+        if (xhr.status === 200) {
+          
+          var details = JSON.parse(xhr.responseText);
+
+          console.log("a. All countries from Asia Continent");
+          console.log(details.filter((ele)=>ele.continents == 'Asia'));
+          console.log("b. All countries with population less than 200000");
+          console.log(details.filter((ele)=>ele.population <= 200000));
+          console.log("c. Name, Capital, Flag of all countries");
+          details.forEach((ele)=>console.log(ele.name)); 
+          details.forEach((ele)=>console.log(ele.capital)); 
+          details.forEach((ele)=>console.log(ele.flag)); 
+          console.log("d. Total population of all countries");
+          var populationArr = details.filter((ele)=>ele.population);
+          console.log(details.reduce((acc,populationArr)=>acc+populationArr));
+          console.log("e. Countries with USD as currency");
+          console.log(details.filter((ele)=>ele.currencies.USD.name == "United States dollar"));
+          
+          
+        } else {
+          console.log("Request failed", xhr.status);
+        }
+      };
+
+      xhr.send();
+    </script>
+  </body>
+</html>
